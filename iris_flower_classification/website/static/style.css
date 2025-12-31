@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: black;
+    padding: 0 10px;
+}
+
+.wrapper {
+    max-width: 500px;
+    width: 100%;
+    background:
+        linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
+        url("iris.jpg");
+    background-size: cover;
+    background-position: center;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.wrapper .title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.wrapper .form .inputfield {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.wrapper .form .inputfield label {
+    width: 200px;
+    color: black;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.wrapper .form .inputfield .input {
+    width: 100%;
+    outline: none;
+    border: 1px solid #d5dbd9;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 3px;
+}
+
+.wrapper .form .inputfield .btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    background: black;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background 0.3s;
+}
+
+.wrapper .form .inputfield .btn:hover {
+    background: #333;
+}
+
+.result {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.result h3 {
+    color: #0000FF; /* Blue prediction text */
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.result img {
+    width: 250px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 500px) {
+    .wrapper .form .inputfield {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .wrapper .form .inputfield label {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}

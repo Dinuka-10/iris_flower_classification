@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris Flower Classification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="title">
+            Iris Flower Classification
+        </div>
+
+        <form action="/" class="form" method="POST">
+            <div class="inputfield">
+                <label>Sepal Length (Cm)</label>
+                <input type="number" step="any" class="input" name="sepallength" required>
+            </div>
+
+            <div class="inputfield">
+                <label>Sepal Width (Cm)</label>
+                <input type="number" step="any" class="input" name="sepalwidth" required>
+            </div>
+
+            <div class="inputfield">
+                <label>Petal Length (Cm)</label>
+                <input type="number" step="any" class="input" name="petallength" required>
+            </div>
+
+            <div class="inputfield">
+                <label>Petal Width (Cm)</label>
+                <input type="number" step="any" class="input" name="petalwidth" required>
+            </div>
+
+            <div class="inputfield">
+                <input type="submit" class="btn" value="Classify Flower">
+            </div>
+        </form>
+
+        <div class="result">
+            {% if pred_name %}
+                <h3>Prediction: {{ pred_name }}</h3>
+                {% if pred_img %}
+                    <img src="{{ url_for('static', filename='images/' + pred_img) }}" alt="{{ pred_name }}">
+                {% endif %}
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
